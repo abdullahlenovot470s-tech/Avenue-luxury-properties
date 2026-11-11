@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #E6ECF5;
+    color: #1B2A44;
+    font-size: 100%; /* Default 16px on mobile (<=639px) */
+  }
+
+  /* Tablets (640px - 1023px): 90% scale (14.4px base) */
+  @media (min-width: 640px) and (max-width: 1023px) {
+    html {
+      font-size: 90%;
+    }
+  }
+
+  /* Desktop (>=1024px): 80% scale (12.8px base) */
+  @media (min-width: 1024px) {
+    html {
+      font-size: 80%;
+    }
+  }
+
+  ::selection {
+    background-color: #2F4B73;
+    color: #ffffff;
+  }
+}
+
+.font-display {
+  font-family: 'Unbounded', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-body {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Glassmorphism primitives */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.glass-panel-dark {
+  background: rgba(27, 42, 68, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-card-subtle {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Ghost watermark text styling matching design */
+.watermark-hero {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.watermark-section {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #dce5f0;
+  opacity: 0.5;
+  user-select: none;
+  pointer-events: none;
+}
