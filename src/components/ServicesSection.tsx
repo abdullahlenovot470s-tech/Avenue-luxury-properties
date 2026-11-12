@@ -21,8 +21,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       'We help you find verified houses, apartments and plots in trusted societies, negotiate a fair price and complete the society and legal checks.',
     locationLabel: 'DHA LAHORE',
-    // 01: modern white villa exterior with a lawn and car porch, daytime
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=70',
   },
   {
     number: '02',
@@ -30,8 +29,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       'We find reliable tenants, collect rent on time and look after maintenance, so your property stays in good condition while you are away.',
     locationLabel: 'BAHRIA TOWN ISLAMABAD',
-    // 02: bright modern living room interior (drawing room feel)
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=70',
   },
   {
     number: '03',
@@ -39,8 +37,7 @@ const SERVICE_CARDS: ServiceCardData[] = [
     description:
       'Get advice on where to invest, sell at the right price, and complete registry, transfer and possession without stress.',
     locationLabel: 'CLIFTON KARACHI',
-    // 03: aerial view of a planned residential society with wide roads and green belts
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=70',
   },
 ];
 
@@ -111,12 +108,18 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
                   <img
                     src={card.image}
                     alt={card.title}
+                    width={800}
+                    height={600}
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                     onError={() => handleImgError(card.number)}
                     className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none transition-transform duration-700 ease-out group-hover:scale-105 z-0"
                   />
                 ) : (
-                  <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-slate-800 via-[#1B2A44] to-slate-950 z-0" />
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-[#1B2A44] to-[#2F4B73] flex items-center justify-center text-white/50 z-0">
+                    <span className="text-xs font-display uppercase tracking-widest">{card.title}</span>
+                  </div>
                 )}
 
                 {/* 2. GRADIENT: transparent to #1B2A44/90 from middle to bottom */}

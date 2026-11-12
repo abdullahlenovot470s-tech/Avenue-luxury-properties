@@ -34,11 +34,11 @@ export const BUY_PROPERTIES: BuyProperty[] = [
     areaCategory: 'Up to 5 Marla',
     beds: 3,
     baths: 3,
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=70',
     gallery: [
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=70',
     ],
     description:
       'Impeccably finished 5 Marla double-storey house in Bahria Town Lahore Sector C. Features solid ash wood doors, Spanish porcelain floor tiles, imported sanitary ware, and dedicated car porch.',
@@ -67,11 +67,11 @@ export const BUY_PROPERTIES: BuyProperty[] = [
     areaCategory: '10 Marla',
     beds: 4,
     baths: 5,
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=70',
     gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&w=1200&q=80',
+      'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=70',
     ],
     description:
       'Architecturally conceived 10 Marla bungalow in Sector C of DHA Phase 5 Lahore. High ceilings, expansive open-plan lounge, Turkish bath fixtures, and car porch for two executive sedans.',
@@ -100,11 +100,11 @@ export const BUY_PROPERTIES: BuyProperty[] = [
     areaCategory: '10 Marla',
     beds: 3,
     baths: 3,
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=70',
     gallery: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&w=1200&q=80',
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=70',
     ],
     description:
       'Corner 3-bedroom luxury condominium in Clifton Block 2 Karachi. Panoramic coastal skyline views, high-speed passenger and cargo elevators, and round-the-clock standby power backup.',
@@ -133,10 +133,10 @@ export const BUY_PROPERTIES: BuyProperty[] = [
     areaCategory: '1 Kanal',
     beds: 0,
     baths: 0,
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=70',
     gallery: [
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&w=1200&q=80',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=70',
     ],
     description:
       'Direct approach 1 Kanal residential plot located on a 60-foot wide avenue in Sector U, DHA Phase 7 Lahore. All development charges and possession utilities cleared, perfect for an architectural villa.',
@@ -165,10 +165,10 @@ export const BUY_PROPERTIES: BuyProperty[] = [
     areaCategory: '10 Marla',
     beds: 3,
     baths: 3,
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=800&q=70',
     gallery: [
-      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&w=1200&q=80',
+      'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&w=800&q=70',
     ],
     description:
       'Brand new 7 Marla architect-built villa in Bahria Town Phase 8 Rawalpindi. Uninterrupted power grid supply, rooftop terrace overlooking the valley, and European fittings throughout.',
@@ -197,10 +197,10 @@ export const BUY_PROPERTIES: BuyProperty[] = [
     areaCategory: 'Up to 5 Marla',
     beds: 2,
     baths: 2,
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=70',
     gallery: [
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&w=1200&q=80',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&w=800&q=70',
     ],
     description:
       'High-demand 2-bedroom executive apartment on the 3rd floor in Sector E-11 Islamabad. Panoramic views of Margalla Hills, high rental yield, dual lifts, and dedicated underground parking slot.',
@@ -229,10 +229,10 @@ export const BUY_PROPERTIES: BuyProperty[] = [
     areaCategory: '2 Kanal+',
     beds: 6,
     baths: 7,
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=800&q=70',
     gallery: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&w=1200&q=80',
+      'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&w=800&q=70',
     ],
     description:
       'Diplomatic enclave style estate sitting on 2 Kanal in Sector F-7 Islamabad. Features heated indoor pool, 25kW hybrid solar farm, Turkish travertine walls, and private security post.',
@@ -259,10 +259,10 @@ export const BUY_PROPERTIES: BuyProperty[] = [
     areaCategory: '2 Kanal+',
     beds: 5,
     baths: 6,
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=70',
     gallery: [
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&w=1200&q=80',
+      'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&w=800&q=70',
     ],
     description:
       'Direct fairway-facing golf villa in Defence Raya Phase 6 Lahore. Bespoke deodar woodwork, infinity plunge pool overlooking hole 14, and basement cinema lounge.',
@@ -289,10 +289,10 @@ export const BUY_PROPERTIES: BuyProperty[] = [
     areaCategory: '1 Kanal',
     beds: 4,
     baths: 4,
-    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?auto=format&fit=crop&w=800&q=70',
     gallery: [
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&w=1200&q=80',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&w=1200&q=80',
+      'https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&w=800&q=70',
     ],
     description:
       'Charming pine sanctuary villa nestled in the hills of Bhurban. Features dual open fireplaces, cedar wood ceilings, expansive terrace over snow-capped valleys, and winter road heating.',

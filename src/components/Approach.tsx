@@ -45,9 +45,10 @@ export const Approach: React.FC<ApproachProps> = ({ onOpenConsultation }) => {
             <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-200/60 group">
               <SafeImage
                 src={HERO_ASSETS.approachPortrait}
-                fallbackSrc={HERO_ASSETS.serviceVilla}
                 alt="The Avenue approach architectural villa with pool"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                width={800}
+                height={1000}
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1B2A44]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                 <span className="text-white text-xs font-display uppercase tracking-wider">
@@ -57,7 +58,7 @@ export const Approach: React.FC<ApproachProps> = ({ onOpenConsultation }) => {
             </div>
 
             {/* Narrative Paragraph */}
-            <p className="font-body text-sm sm:text-[15px] leading-relaxed text-[#1B2A44]/80 font-normal max-w-md">
+            <p className="font-body text-sm sm:text-[15px] leading-relaxed text-[#1B2A44]/90 font-normal max-w-md">
               At Avenue, we believe a home is more than a physical structure: it is the cornerstone of your family's future. We do not just list properties; we present environments that inspire. Our team combines decades of market intelligence across DHA, CDA sectors, and Bahria Town with a deep appreciation for high-end design, ensuring every registry, transfer, and possession handover is completely transparent and seamless.
             </p>
 
@@ -80,7 +81,7 @@ export const Approach: React.FC<ApproachProps> = ({ onOpenConsultation }) => {
             {/* Small Uppercase Label */}
             <div className="flex items-center gap-2">
               <div className="w-8 h-[2px] bg-[#1B2A44]/30" />
-              <span className="font-display font-semibold text-[11px] sm:text-xs tracking-widest text-[#1B2A44]/75 uppercase">
+              <span className="font-display font-semibold text-[11px] sm:text-xs tracking-widest text-[#1B2A44]/85 uppercase">
                 CRAFTING YOUR VISION INTO ADDRESSES
               </span>
             </div>
@@ -90,7 +91,9 @@ export const Approach: React.FC<ApproachProps> = ({ onOpenConsultation }) => {
               <SafeImage
                 src={HERO_ASSETS.approachWalkway}
                 alt="Luxury modern residence with illuminated water-feature reflection walkway at night"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+                width={1200}
+                height={900}
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1B2A44]/80 via-transparent to-transparent" />
 

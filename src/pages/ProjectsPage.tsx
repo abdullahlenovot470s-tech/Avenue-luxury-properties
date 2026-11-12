@@ -212,20 +212,18 @@ export const ProjectsPage: React.FC = () => {
               const saved = isPropertySaved(project.id);
 
               return (
-                <motion.div
+                <div
                   key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
                   className="bg-white rounded-[28px] sm:rounded-3xl overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between group hover:shadow-2xl transition-all duration-300"
                 >
-                  {/* Photo with Heart Save Button & Category */}
-                  <div className="relative aspect-[16/11] overflow-hidden">
+                  {/* Photo with Heart Save Button & Category - fixed 4/3 aspect ratio */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     <SafeImage
                       src={project.image}
                       alt={project.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      width={800}
+                      height={600}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     />
 
                     <div className="absolute top-3.5 left-3.5 glass-panel-dark px-3 py-1 rounded-full text-[10px] uppercase font-display tracking-widest text-white">
@@ -263,15 +261,15 @@ export const ProjectsPage: React.FC = () => {
                         {project.price}
                       </div>
 
-                      <p className="text-xs text-slate-500 font-body line-clamp-2 mt-2 leading-relaxed">
+                      <p className="text-xs text-slate-700 font-medium font-body line-clamp-2 mt-2 leading-relaxed">
                         {project.description}
                       </p>
                     </div>
 
                     {/* Specs Row */}
-                    <div className="grid grid-cols-3 gap-2 py-3 border-y border-slate-100 text-xs text-slate-600 font-body">
+                    <div className="grid grid-cols-3 gap-2 py-3 border-y border-slate-100 text-xs text-slate-800 font-body">
                       <span className="flex items-center gap-1">
-                        <Bed className="w-3.5 h-3.5 text-slate-400" /> {project.beds} Beds
+                        <Bed className="w-3.5 h-3.5 text-slate-500" /> {project.beds} Beds
                       </span>
                       <span className="flex items-center gap-1">
                         <Bath className="w-3.5 h-3.5 text-slate-400" /> {project.baths} Baths
@@ -292,7 +290,7 @@ export const ProjectsPage: React.FC = () => {
                       </span>
                     </Link>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>

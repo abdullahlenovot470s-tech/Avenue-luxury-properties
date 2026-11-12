@@ -295,21 +295,19 @@ export const RentPage: React.FC = () => {
               const saved = isPropertySaved(listing.id);
 
               return (
-                <motion.div
+                <div
                   key={listing.id}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4 }}
                   onClick={() => navigate(`/rent/${listing.id}`)}
                   className="bg-white rounded-[28px] sm:rounded-3xl overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between group hover:shadow-2xl transition-all duration-300 cursor-pointer"
                 >
-                  {/* Photo filling card at natural ratio (no empty space), glass city label, FOR RENT badge, Heart */}
-                  <div className="relative aspect-[16/11] overflow-hidden">
+                  {/* Photo filling card at fixed 4/3 ratio, glass city label, FOR RENT badge, Heart */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     <SafeImage
                       src={listing.image}
                       alt={listing.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      width={800}
+                      height={600}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     />
 
                     <div className="absolute top-3.5 left-3.5 flex flex-wrap gap-1.5">
@@ -355,7 +353,7 @@ export const RentPage: React.FC = () => {
                         {formatRent(listing.monthlyRent)}
                       </div>
 
-                      <p className="text-xs text-slate-500 font-body line-clamp-2 mt-2 leading-relaxed">
+                      <p className="text-xs text-slate-700 font-medium font-body line-clamp-2 mt-2 leading-relaxed">
                         {listing.description}
                       </p>
                     </div>

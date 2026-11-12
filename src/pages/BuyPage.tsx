@@ -245,20 +245,18 @@ export const BuyPage: React.FC = () => {
               const saved = isPropertySaved(prop.id);
 
               return (
-                <motion.div
+                <div
                   key={prop.id}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4 }}
                   className="bg-white rounded-[28px] sm:rounded-3xl overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between group hover:shadow-2xl transition-all duration-300"
                 >
-                  {/* Photo with Badges & Heart Save Button */}
-                  <div className="relative aspect-[16/11] overflow-hidden">
+                  {/* Photo with Badges & Heart Save Button - fixed 4/3 aspect ratio */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     <SafeImage
                       src={prop.image}
                       alt={prop.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      width={800}
+                      height={600}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     />
 
                     <div className="absolute top-3.5 left-3.5 flex flex-wrap gap-1.5">
@@ -300,13 +298,13 @@ export const BuyPage: React.FC = () => {
                         {prop.price}
                       </div>
 
-                      <p className="text-xs text-slate-500 font-body line-clamp-2 mt-2 leading-relaxed">
+                      <p className="text-xs text-slate-700 font-medium font-body line-clamp-2 mt-2 leading-relaxed">
                         {prop.description}
                       </p>
                     </div>
 
                     {/* Specs Row: Area in Marla/Kanal/Sq. Yd only, beds, baths */}
-                    <div className="grid grid-cols-3 gap-2 py-3 border-y border-slate-100 text-xs text-slate-600 font-body">
+                    <div className="grid grid-cols-3 gap-2 py-3 border-y border-slate-100 text-xs text-slate-800 font-body">
                       {prop.type === 'Plot' ? (
                         <>
                           <span className="col-span-2 flex items-center gap-1 font-semibold text-[#1B2A44]">
@@ -342,7 +340,7 @@ export const BuyPage: React.FC = () => {
                       </span>
                     </Link>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>

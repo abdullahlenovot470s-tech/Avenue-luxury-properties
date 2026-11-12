@@ -58,12 +58,14 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onSelectProject, onOpenCon
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.5 }}
-                className="relative w-full aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group border border-slate-200"
+                className="relative w-full aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group border border-slate-200"
               >
                 <SafeImage
                   src={activeProject.image}
                   alt={activeProject.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000"
                 />
 
                 {/* Gradient Scrim for Legibility */}
@@ -164,7 +166,9 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onSelectProject, onOpenCon
                   <SafeImage
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1B2A44]/80 via-black/20 to-transparent group-hover:from-[#1B2A44]/90 transition-colors" />
 
@@ -184,7 +188,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onSelectProject, onOpenCon
             </div>
 
             {/* Architectural Statement */}
-            <div className="p-5 rounded-2xl bg-[#E6ECF5]/40 border border-[#E6ECF5] text-xs sm:text-[13px] text-[#1B2A44]/75 leading-relaxed font-body">
+            <div className="p-5 rounded-2xl bg-[#E6ECF5]/40 border border-[#E6ECF5] text-xs sm:text-[13px] text-[#1B2A44]/90 leading-relaxed font-body">
               <span className="font-semibold text-[#1B2A44]">Avenue Legal Guarantee:</span> Every residence in our signature portfolio undergoes rigorous LDA / CDA / KDA approval verification, clear fard and registry review, and structural inspection before representation.
             </div>
           </div>

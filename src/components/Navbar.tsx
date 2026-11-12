@@ -80,10 +80,10 @@ export const Navbar: React.FC = () => {
           bg-[#1B2A44]/45 (unscrolled) / bg-[#1B2A44]/85 with backdrop-blur-xl (scrolled)
         */}
         <div
-          className={`max-w-[1440px] mx-auto flex items-center justify-between transition-all duration-300 rounded-full px-5 sm:px-6 py-2.5 sm:py-3 border border-white/10 ${
+          className={`max-w-[1440px] mx-auto flex items-center justify-between transition-all duration-300 rounded-full px-5 sm:px-6 py-2.5 sm:py-3 border border-white/20 ${
             scrolled
-              ? 'bg-[#1B2A44]/85 backdrop-blur-xl shadow-2xl border-white/25'
-              : 'bg-[#1B2A44]/45 backdrop-blur-md shadow-lg'
+              ? 'bg-[#101B2E]/95 backdrop-blur-2xl shadow-2xl'
+              : 'bg-[#142036]/90 backdrop-blur-xl shadow-xl'
           }`}
         >
           {/* Brand Wordmark on Left */}
@@ -208,7 +208,7 @@ export const Navbar: React.FC = () => {
               <div className="hidden sm:flex items-center gap-4">
                 <Link
                   to="/login"
-                  className="text-sm font-medium text-white/90 hover:text-white transition-colors"
+                  className="text-sm font-semibold text-white px-3.5 py-1.5 rounded-full hover:bg-white/15 transition-all tracking-wide"
                 >
                   Login
                 </Link>

@@ -125,7 +125,9 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
             <SafeImage
               src={selectedService.thumbnailImage || HERO_ASSETS.serviceVilla}
               alt={selectedService.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1B2A44]/90 via-transparent to-transparent flex items-end p-6">
               <div className="text-white">

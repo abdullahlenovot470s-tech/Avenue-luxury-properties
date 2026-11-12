@@ -83,19 +83,21 @@ export const ContactPage: React.FC = () => {
               key={office.city}
               className="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between group hover:shadow-xl transition-all duration-300"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden">
                 <SafeImage
                   src={office.image}
                   alt={office.city}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  width={800}
+                  height={500}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute bottom-3 left-3 glass-panel-dark px-3 py-1 rounded-full text-xs font-display uppercase tracking-widest text-white">
-                  {office.city} Desk
+                  {office.city.endsWith('Desk') ? office.city : `${office.city} Desk`}
                 </div>
               </div>
 
               <div className="p-6 flex flex-col justify-between flex-1 space-y-4">
-                <div className="space-y-2 text-xs font-body text-slate-600">
+                <div className="space-y-2 text-xs font-body text-slate-800">
                   <div className="flex items-start gap-2">
                     <MapPin className="w-4 h-4 text-[#2F4B73] shrink-0 mt-0.5" />
                     <span>{office.address}</span>
@@ -110,8 +112,8 @@ export const ContactPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="pt-3 border-t border-slate-100 text-[11px] text-slate-500">
-                  <span className="font-semibold text-slate-700 font-display uppercase">Advisors:</span>{' '}
+                <div className="pt-3 border-t border-slate-200 text-[11px] text-slate-700">
+                  <span className="font-semibold text-slate-900 font-display uppercase">Advisors:</span>{' '}
                   {office.directors}
                 </div>
               </div>
@@ -147,12 +149,12 @@ export const ContactPage: React.FC = () => {
 
             <div className="pt-2">
               <a
-                href="https://wa.me/923008452100?text=Assalam%20o%20Alaikum%2C%20I%20am%20inquiring%20about%20Avenue%20Luxury%20Properties."
+                href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum%2C%20I%20am%20inquiring%20about%20Avenue%20Luxury%20Properties."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-display text-xs uppercase tracking-wider font-semibold transition-all shadow-md"
               >
-                <span>Chat via WhatsApp: +92 300 8452100</span>
+                <span>Chat via WhatsApp: +92 300 1234567</span>
               </a>
             </div>
           </div>
@@ -227,7 +229,7 @@ export const ContactPage: React.FC = () => {
                       <input
                         type="tel"
                         required
-                        placeholder="e.g. 0300 8452100"
+                        placeholder="e.g. 0300 1234567"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white text-xs sm:text-sm focus:outline-none focus:border-white/50"

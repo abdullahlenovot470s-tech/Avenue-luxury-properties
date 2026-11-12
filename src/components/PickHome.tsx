@@ -57,17 +57,13 @@ export const PickHome: React.FC<PickHomeProps> = ({ onSelectProperty }) => {
 
         {/* Three Property Rows */}
         <div className="space-y-12 sm:space-y-16 divide-y divide-slate-100">
-          {PROPERTY_LISTINGS.map((property) => {
+          {PROPERTY_LISTINGS.slice(0, 3).map((property) => {
             const isMirrored = property.layoutVariant === 'exterior-right';
             const saved = isPropertySaved(property.id);
 
             return (
-              <motion.div
+              <div
                 key={property.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.8 }}
                 className="pt-12 sm:pt-16 first:pt-0 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center"
               >
                 {/* Exterior & Interior Image Composition */}
@@ -78,27 +74,33 @@ export const PickHome: React.FC<PickHomeProps> = ({ onSelectProperty }) => {
                 >
                   {isMirrored ? (
                     <>
-                      {/* Mirrored: Two Tall Narrow Interiors on Left */}
-                      <div className="sm:col-span-3 aspect-[9/16] sm:aspect-auto sm:h-full rounded-2xl overflow-hidden shadow-md group border border-slate-200">
+                      {/* Mirrored: Two 4/3 Interiors on Left */}
+                      <div className="sm:col-span-3 aspect-[4/3] sm:aspect-auto sm:h-full rounded-2xl overflow-hidden shadow-md group border border-slate-200">
                         <SafeImage
                           src={property.interiorImages[0]}
                           alt={`${property.name} interior detail 1`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          width={800}
+                          height={600}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                         />
                       </div>
-                      <div className="sm:col-span-3 aspect-[9/16] sm:aspect-auto sm:h-full rounded-2xl overflow-hidden shadow-md group border border-slate-200">
+                      <div className="sm:col-span-3 aspect-[4/3] sm:aspect-auto sm:h-full rounded-2xl overflow-hidden shadow-md group border border-slate-200">
                         <SafeImage
                           src={property.interiorImages[1]}
                           alt={`${property.name} interior detail 2`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          width={800}
+                          height={600}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                         />
                       </div>
-                      {/* Exterior on Right with Heart Button */}
+                      {/* Exterior on Right with Heart Button - 4/3 aspect ratio */}
                       <div className="sm:col-span-6 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group border border-slate-200 relative">
                         <SafeImage
                           src={property.exteriorImage}
                           alt={`${property.name} architectural exterior`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          width={800}
+                          height={600}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                         />
                         <div className="absolute top-3 right-3 glass-panel-dark px-3 py-1 rounded-full text-[10px] uppercase font-display tracking-widest text-white">
                           {property.architecturalStyle}
@@ -118,12 +120,14 @@ export const PickHome: React.FC<PickHomeProps> = ({ onSelectProperty }) => {
                     </>
                   ) : (
                     <>
-                      {/* Default: Large Exterior on Left with Heart Button */}
+                      {/* Default: Large Exterior on Left with Heart Button - 4/3 aspect ratio */}
                       <div className="sm:col-span-6 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group border border-slate-200 relative">
                         <SafeImage
                           src={property.exteriorImage}
                           alt={`${property.name} architectural exterior`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          width={800}
+                          height={600}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                         />
                         <div className="absolute top-3 left-3 glass-panel-dark px-3 py-1 rounded-full text-[10px] uppercase font-display tracking-widest text-white">
                           {property.architecturalStyle}
@@ -140,19 +144,23 @@ export const PickHome: React.FC<PickHomeProps> = ({ onSelectProperty }) => {
                           <Heart className={`w-4 h-4 ${saved ? 'fill-current' : ''}`} />
                         </button>
                       </div>
-                      {/* Two Tall Narrow Interiors on Right */}
-                      <div className="sm:col-span-3 aspect-[9/16] sm:aspect-auto sm:h-full rounded-2xl overflow-hidden shadow-md group border border-slate-200">
+                      {/* Two 4/3 Interiors on Right */}
+                      <div className="sm:col-span-3 aspect-[4/3] sm:aspect-auto sm:h-full rounded-2xl overflow-hidden shadow-md group border border-slate-200">
                         <SafeImage
                           src={property.interiorImages[0]}
                           alt={`${property.name} interior detail 1`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          width={800}
+                          height={600}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                         />
                       </div>
-                      <div className="sm:col-span-3 aspect-[9/16] sm:aspect-auto sm:h-full rounded-2xl overflow-hidden shadow-md group border border-slate-200">
+                      <div className="sm:col-span-3 aspect-[4/3] sm:aspect-auto sm:h-full rounded-2xl overflow-hidden shadow-md group border border-slate-200">
                         <SafeImage
                           src={property.interiorImages[1]}
                           alt={`${property.name} interior detail 2`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          width={800}
+                          height={600}
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                         />
                       </div>
                     </>
@@ -212,7 +220,7 @@ export const PickHome: React.FC<PickHomeProps> = ({ onSelectProperty }) => {
                     </Link>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>

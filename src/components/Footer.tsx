@@ -108,12 +108,12 @@ export const Footer: React.FC = () => {
               </div>
               <div className="pt-1">
                 <a
-                  href="https://wa.me/923008452100?text=Assalam%20o%20Alaikum%2C%20I%20am%20inquiring%20about%20Avenue%20Luxury%20Properties."
+                  href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum%2C%20I%20am%20inquiring%20about%20Avenue%20Luxury%20Properties."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-display text-emerald-400 hover:text-emerald-300 transition-colors"
                 >
-                  <span>Chat on WhatsApp: +92 300 8452100</span>
+                  <span>Chat on WhatsApp: +92 300 1234567</span>
                 </a>
               </div>
             </div>

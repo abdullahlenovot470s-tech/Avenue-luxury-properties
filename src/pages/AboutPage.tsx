@@ -106,11 +106,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation }) => {
           </div>
         </div>
 
-        <div className="lg:col-span-5 relative rounded-[28px] sm:rounded-[36px] overflow-hidden shadow-xl min-h-[360px] group border border-slate-200">
+        <div className="lg:col-span-5 relative aspect-[16/9] lg:aspect-auto rounded-[28px] sm:rounded-[36px] overflow-hidden shadow-xl min-h-[320px] group border border-slate-200">
           <SafeImage
             src={HERO_ASSETS.approachWalkway}
             alt="Avenue Architecture Walkway"
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            width={1200}
+            height={675}
+            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1B2A44]/80 via-transparent to-transparent flex items-end p-8">
             <div className="glass-panel p-5 rounded-2xl text-white w-full">
@@ -132,7 +134,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation }) => {
           <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#1B2A44] uppercase tracking-tight">
             PARTNERS & DIRECTORS
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 font-body mt-1 max-w-xl">
+          <p className="text-xs sm:text-sm text-slate-700 font-medium font-body mt-1 max-w-xl">
             Led by senior Pakistani property and architecture professionals with degrees from NCA Lahore, IBA Karachi, and NUST.
           </p>
         </div>
@@ -144,11 +146,23 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation }) => {
               className="bg-slate-50/80 rounded-3xl p-6 border border-slate-100 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
             >
               <div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden mb-5 border border-slate-200/80 bg-white shadow-inner">
-                  <AvatarPlaceholder
-                    variant={member.avatarVariant}
-                    className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                  />
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-5 border border-slate-200/80 bg-[#1B2A44] shadow-md group">
+                  {member.image ? (
+                    <SafeImage
+                      src={member.image}
+                      alt={member.name}
+                      width={400}
+                      height={500}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-[#1B2A44] to-[#2F4B73] flex flex-col items-center justify-center text-white">
+                      <div className="w-14 h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center font-display font-extrabold text-lg text-white mb-2">
+                        {member.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                      </div>
+                      <span className="text-[10px] uppercase font-display tracking-widest text-white/70">Avenue Partner</span>
+                    </div>
+                  )}
                   <div className="absolute top-3 right-3 glass-panel-dark px-3 py-1 rounded-full text-[10px] font-display uppercase tracking-wider text-white">
                     {member.location}
                   </div>
@@ -161,7 +175,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation }) => {
                   {member.role}
                 </span>
 
-                <p className="text-xs text-slate-600 font-body leading-relaxed">{member.bio}</p>
+                <p className="text-xs text-slate-700 font-body leading-relaxed">{member.bio}</p>
               </div>
 
               <div className="pt-5 mt-4 border-t border-slate-200/60">

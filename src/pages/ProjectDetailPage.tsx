@@ -204,7 +204,7 @@ export const ProjectDetailPage: React.FC = () => {
 
         <div className="flex items-center gap-3">
           <a
-            href={`https://wa.me/923008452100?text=${encodeURIComponent(
+            href={`https://wa.me/923001234567?text=${encodeURIComponent(
               `Assalam o Alaikum, I am inquiring about the signature project: ${project.name} (${project.price}).`
             )}`}
             target="_blank"
